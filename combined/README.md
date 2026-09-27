@@ -49,9 +49,9 @@ authentication.
   web-service and PostgreSQL plans. Render needs a Dockerfile build using Java
   25. The free web service sleeps after 15 idle minutes, and the free database
   expires after 30 days; use this only for a demo, not durable production data.
-2. After the Vercel site is created, set the Render service variable
-  `CORS_ALLOWED_ORIGINS` to the exact frontend origin, such as
-  `https://your-project.vercel.app` (no trailing slash), then redeploy.
+2. The Blueprint sets `CORS_ALLOWED_ORIGINS` to the current Vercel origin
+  `https://task-manager-app-deepu59.vercel.app`. If Vercel assigns a different
+  production domain, update that value in `render.yaml` and sync the Blueprint.
 3. The backend uses the `prod` Spring profile and the managed PostgreSQL database.
   The H2 console is disabled in this profile.
 

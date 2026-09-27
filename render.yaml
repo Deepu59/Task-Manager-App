@@ -29,7 +29,7 @@ services:
           name: task-scheduler-db
           property: password
       - key: CORS_ALLOWED_ORIGINS
-        sync: false
+        value: https://task-manager-app-deepu59.vercel.app
 
 databases:
   - name: task-scheduler-db
