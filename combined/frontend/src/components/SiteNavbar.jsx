@@ -1,5 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
-import logo from "../pages/home/logo_png.png";
+import logo from "../pages/home/Logo_png.png";
 
 const navLink = ({ isActive }) =>
   (isActive ? "text-sky-700" : "text-slate-700") +
