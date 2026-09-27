@@ -2,7 +2,7 @@ services:
   - type: web
     name: task-scheduler-api
     runtime: docker
-    plan: starter
+    plan: free
     dockerfilePath: ./combined/backend/Dockerfile
     dockerContext: ./combined/backend
     envVars:
@@ -33,6 +33,6 @@ services:
 
 databases:
   - name: task-scheduler-db
-    plan: basic-256mb
+    plan: free
     databaseName: task_scheduler
     user: task_scheduler

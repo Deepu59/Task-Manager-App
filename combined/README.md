@@ -45,9 +45,10 @@ authentication.
 
 ### Backend and database on Render
 
-1. Create a Render Blueprint from the repository root and review the paid
-  web-service and PostgreSQL plans before confirming. Render needs a Dockerfile
-  build using Java 25.
+1. Create a Render Blueprint from the repository root and select the free
+  web-service and PostgreSQL plans. Render needs a Dockerfile build using Java
+  25. The free web service sleeps after 15 idle minutes, and the free database
+  expires after 30 days; use this only for a demo, not durable production data.
 2. After the Vercel site is created, set the Render service variable
   `CORS_ALLOWED_ORIGINS` to the exact frontend origin, such as
   `https://your-project.vercel.app` (no trailing slash), then redeploy.

@@ -67,7 +67,7 @@ The REST API runs on port `8080` by default.
 
 ## Hosting
 
-Deployment files are included for Vercel and Render. The Render Blueprint provisions a Spring Boot service and PostgreSQL database; review provider pricing before creating those resources. Configure `VITE_API_BASE_URL` in Vercel with the Render API URL and `CORS_ALLOWED_ORIGINS` in Render with the exact Vercel site origin.
+Deployment files are included for Vercel and Render. The Render Blueprint uses free web-service and PostgreSQL plans. Free Render web services sleep after 15 minutes without traffic, and free PostgreSQL expires after 30 days (with a limited recovery window); this setup is for a demo, not durable production data. Vercel Hobby is free for personal, non-commercial projects. Configure `VITE_API_BASE_URL` in Vercel with the Render API URL and `CORS_ALLOWED_ORIGINS` in Render with the exact Vercel site origin.
 
 See the [deployment and development guide](combined/README.md) for setup details and environment variables.
 
