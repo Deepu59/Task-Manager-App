@@ -1,0 +1,29 @@
+# Java build output
+**/target/
+**/*.class
+
+# Node and frontend build output
+**/node_modules/
+**/dist/
+**/dist-ssr/
+**/*.local
+
+# Local environment and secrets
+**/.env
+**/.env.*
+!**/.env.example
+
+# Editor and operating system files
+.vscode/*
+!.vscode/extensions.json
+**/.idea/
+*.iml
+.DS_Store
+
+# Local workspace artifacts
+/.github/modernize/
+/combined/frontend/combined/
+
+# Logs
+*.log
+npm-debug.log*

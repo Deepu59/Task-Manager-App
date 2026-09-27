@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: task-scheduler-api
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./combined/backend/Dockerfile
+    dockerContext: ./combined/backend
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: DB_HOST
+        fromDatabase:
+          name: task-scheduler-db
+          property: host
+      - key: DB_PORT
+        fromDatabase:
+          name: task-scheduler-db
+          property: port
+      - key: DB_NAME
+        fromDatabase:
+          name: task-scheduler-db
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: task-scheduler-db
+          property: user
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: task-scheduler-db
+          property: password
+      - key: CORS_ALLOWED_ORIGINS
+        sync: false
+
+databases:
+  - name: task-scheduler-db
+    plan: basic-256mb
+    databaseName: task_scheduler
+    user: task_scheduler
